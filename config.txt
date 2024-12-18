@@ -32,3 +32,6 @@ Rarity brilla sobre Xanadu
 Applejack en: Por una caja de manzanas ... (Per una cassetta di mele)
 Pinkie pie It's party time!
 
+curl -X POST https://5b979dc0093884d83f.gradio.live/gradio_api/call/predict -s -H "Content-Type: application/json" -d '{ "data": ["Hello!!"]}'  | awk -F'"' '{ print $4}'   | read EVENT_ID; curl -N https://5b979dc0093884d83f.gradio.live/gradio_api/call/predict/$EVENT_ID
+
+curl -X POST https://8c0b62a7f8611681c0.gradio.live/api/predict -H "Content-Type: application/json" -d '{"data":["¿Cuál es el horario de atención?"]}'
